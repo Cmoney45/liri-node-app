@@ -1,24 +1,27 @@
 require("dotenv").config();
-let request = require("request");
-
-let apiKeys = require("./keys.js");
 
 const selectedAction = process.argv[2];
 let searchTerm = process.argv.slice(3).join(" ");
 
 // console.log(searchTerm);
 
-switch (selectedAction){
+switch (selectedAction) {
     case "movie-this":
-        const omdbQuery = require(`./omdb`);
-        searchTerm = (searchTerm || "Mr. Nobody")
+        const omdbQuery = require(`./functionality/omdb`);
+        searchTerm = (searchTerm || "Mr. Nobody");
         omdbQuery(searchTerm);
         break
     case "concert-this":
-        const bandsInTownQuery = require(`./bandsInTown`)
+        const bandsInTownQuery = require(`./functionality/bandsInTown`);
+        searchTerm = (searchTerm || "Mr. Nobody");
         bandsInTownQuery(searchTerm);
-        break
+        break;
     case "spotify-this-song":
-        spotifyTheSongQuery();
+        const spotifyTheSongQuery = require(`./functionality/spotifiy`);
+        searchTerm = (searchTerm || "The Sign Ace of Base");
+        spotifyTheSongQuery(searchTerm);
+        break;
+    default:
+        console.log(`Action not recognized, please use an approved action.`)
 
 }
