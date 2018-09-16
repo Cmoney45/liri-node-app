@@ -1,4 +1,5 @@
 const request = require("request");
+const fs = require("fs");
 
 function omdbQuery(searchTerm) {
 
@@ -30,7 +31,11 @@ function omdbQuery(searchTerm) {
                     `Plot Summary: ${jsonData.Plot}`,
                     `Actors: ${jsonData.Actors}`,
                 ].join("\n\n")
-                console.log(`${seperator}${movieData}${seperator}`)
+                fs.appendFile('./functionality/log.txt', movieData + seperator, function (err) {
+                    if (err) { throw err }
+                    console.log(`${seperator}${movieData}${seperator}`)
+
+                })
             }
         }
     })

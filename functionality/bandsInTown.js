@@ -1,5 +1,7 @@
 const request = require("request");
 const moment = require("moment")
+const fs = require("fs");
+
 const seperator = "\n----------------------------------------------------------\n"
 
 
@@ -28,8 +30,11 @@ function bandsInTownQuery(searchTerm) {
                         `Date of Event: ${moment(jsonData[i].datetime).format("MMMM Do, YYYY")}`
                     ].join(`\n\n`);
 
-                    console.log(`${seperator}${venueData}${seperator}`)
-
+                    fs.appendFile('./functionality/log.txt', venueData + seperator, function(err) {
+                        if (err) {throw err}
+                        
+                        console.log(`${seperator}${venueData}${seperator}`)
+                    })
                 }
             }
         }

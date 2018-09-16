@@ -1,7 +1,9 @@
 let apiKeys = require("./keys.js");
 const Spotify = require('node-spotify-api');
 const moment = require("moment")
-const seperator = "\n\n----------------------------------------------------------\n\n"
+const fs = require("fs");
+
+const seperator = "\n----------------------------------------------------------\n"
 
 const spotifyOption = new Spotify({
     id: apiKeys.spotify.id,
@@ -11,15 +13,22 @@ const spotifyOption = new Spotify({
 function spotifyQuery(searchTerm) {
     spotifyOption.search({ type: `track`, query: searchTerm, limit: 1 }, function (err, data) {
         if (err) { throw err }
+
+        // console.log(data.tracks.items);
         const main = data.tracks.items[0];
 
         songData = [
             `Artist: ${main.artists[0].name}`,
             `Song Name: ${main.name}`,
             `Preview Link: ${(main.preview_url || "N/A")}`,
-            `Album: ${main.album.name} (${moment(main.album.release_date).format("YYYY")})`].join("\n\n")
+            `Album: ${main.album.name} (${moment(main.album.release_date, "YYYY-MM-DD").format("YYYY")})`
+        ].join("\n\n")
 
-        console.log(`${seperator}${songData}${seperator}`);
+        fs.appendFile('./functionality/log.txt', songData + seperator, function (err) {
+            if (err) { throw err }
+
+            console.log(`${seperator}${songData}${seperator}`);
+        })
     })
 };
 

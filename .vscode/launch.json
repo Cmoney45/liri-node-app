@@ -14,7 +14,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch spotify",
-            "program": "${workspaceFolder}\\spotifiy.js"
+            "program": "${workspaceFolder}\\functionality\\spotify.js"
         }
     ]
 }

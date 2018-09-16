@@ -1,0 +1,96 @@
+Venue: 1
+
+Venue Name: The Norva
+
+Venue Location: Norfolk, VA United States
+
+Date of Event: September 30th, 2018
+----------------------------------------------------------
+Venue: 2
+
+Venue Name: Township Auditorium
+
+Venue Location: Columbia, SC United States
+
+Date of Event: October 1st, 2018
+----------------------------------------------------------
+Venue: 3
+
+Venue Name: Charlotte Metro Credit Union Amphitheatre
+
+Venue Location: Charlotte, NC United States
+
+Date of Event: October 3rd, 2018
+----------------------------------------------------------
+Venue: 4
+
+Venue Name: Salem Civic Center
+
+Venue Location: Salem, VA United States
+
+Date of Event: October 4th, 2018
+----------------------------------------------------------
+Venue: 5
+
+Venue Name: Intrust Bank Arena
+
+Venue Location: Wichita, KS United States
+
+Date of Event: November 6th, 2018
+----------------------------------------------------------
+Venue: 6
+
+Venue Name: Broadmoor World Arena
+
+Venue Location: Colorado Springs, CO United States
+
+Date of Event: November 7th, 2018
+----------------------------------------------------------
+Venue: 7
+
+Venue Name: AK Chin Pavilion
+
+Venue Location: Phoenix, AZ United States
+
+Date of Event: November 10th, 2018
+----------------------------------------------------------
+Venue: 8
+
+Venue Name: Save Mart Center
+
+Venue Location: Fresno, CA United States
+
+Date of Event: November 12th, 2018
+----------------------------------------------------------
+Venue: 9
+
+Venue Name: Golden 1 Center
+
+Venue Location: Sacramento, CA United States
+
+Date of Event: November 13th, 2018
+----------------------------------------------------------
+Venue: 10
+
+Venue Name: Veterans Memorial Coliseum
+
+Venue Location: Portland, OR United States
+
+Date of Event: November 15th, 2018
+----------------------------------------------------------
+Artist: Backstreet Boys
+
+Song Name: I Want It That Way
+
+Preview Link: https://p.scdn.co/mp3-preview/e72a05dc3f69c891e3390c3ceaa77fad02f6b5f6?cid=7efc45190a524bd094cad46e9c995730
+
+Album: The Hits--Chapter One (2001)
+----------------------------------------------------------
+Artist: Backstreet Boys
+
+Song Name: I Want It That Way
+
+Preview Link: https://p.scdn.co/mp3-preview/e72a05dc3f69c891e3390c3ceaa77fad02f6b5f6?cid=7efc45190a524bd094cad46e9c995730
+
+Album: The Hits--Chapter One (2001)
+----------------------------------------------------------
