@@ -10,7 +10,7 @@ How To Start:
   ---------------------------------------------
     #Spotify API keys
     
-    SPOTIFY_ID=your-<spotify-id>
+    SPOTIFY_ID=<your-spotify-id>
     SPOTIFY_SECRET=<your-spotify-secret>
   ---------------------------------------------
   - In the <> supply your specific keys from spotify
