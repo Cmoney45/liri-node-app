@@ -20,7 +20,7 @@ How to Use:
   - Type "node liri <command> <SearchTerm>"
     - In the <commmand> use one of the following based on what you are looking for:
        - concert-this = Find next 10 concerts for a band supplied after where <SearchTerm> is.
-          - i.e. "node liri concert-this twenty-one pilots
+          - i.e. "node liri concert-this twenty-one pilots"
         - spotify-this-song = Find the Spotify data for a song supplied after where <SearchTerm> is
           - i.e "node liri spotify-this-song Hit me baby one more time"
         - movie-this = Find IMDB Data about a movie title supplied after where <SearchTerm> is
