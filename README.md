@@ -3,7 +3,7 @@ LIRI will search Spotify for songs, Bands in Town for concerts, and OMDB for mov
 
 This is a console command that utilizes GIT and Node.
 
-How To Start:
+## How To Install:
   - Clone to your repository
   - Do a "npm i" to download all required modules.
   - Create file named .env and the following:
@@ -16,7 +16,7 @@ How To Start:
   - In the <> supply your specific keys from spotify
   - You are prepared!
 
-How to Use:
+## How to Use:
   - Type "node liri <command> <SearchTerm>"
     - In the <commmand> use one of the following based on what you are looking for:
        - concert-this = Find next 10 concerts for a band supplied after where <SearchTerm> is.
