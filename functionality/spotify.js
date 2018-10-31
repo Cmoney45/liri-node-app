@@ -10,8 +10,8 @@ const spotifyOption = new Spotify({
     secret: apiKeys.spotify.secret
 });
 
-function spotifyQuery(searchTerm) {
-    spotifyOption.search({ type: `track`, query: searchTerm, limit: 1 }, function (err, data) {
+const spotifyQuery = searchTerm => {
+    spotifyOption.search({ type: `track`, query: searchTerm, limit: 1 }, (err, data) => {
         if (err) { throw err }
 
         // console.log(data.tracks.items);
@@ -24,7 +24,7 @@ function spotifyQuery(searchTerm) {
             `Album: ${main.album.name} (${moment(main.album.release_date, "YYYY-MM-DD").format("YYYY")})`
         ].join("\n\n")
 
-        fs.appendFile('./functionality/log.txt', songData + seperator, function (err) {
+        fs.appendFile('./functionality/log.txt', songData + seperator, err => {
             if (err) { throw err }
 
             console.log(`${seperator}${songData}${seperator}`);

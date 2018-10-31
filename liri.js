@@ -3,7 +3,7 @@ require("dotenv").config();
 let selectedAction = process.argv[2];
 let searchTerm = process.argv.slice(3).join(" ");
 
-function actionSelect(action, term) {
+const actionSelect = (action, term) => {
     switch (action) {
         case "movie-this":
             const omdb = require(`./functionality/omdb`);

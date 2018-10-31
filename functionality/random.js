@@ -1,8 +1,8 @@
 const fs = require("fs");
 const liri = require(`../liri`);
 
-function randomQuery() {
-    fs.readFile(`./functionality/random.txt`, `utf8`, function (err, data) {
+const randomQuery = () => {
+    fs.readFile(`./functionality/random.txt`, `utf8`, (err, data) => {
         if (err) throw { err };
 
         const dataArr = data.split(",");

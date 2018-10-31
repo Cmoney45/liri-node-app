@@ -5,10 +5,10 @@ const fs = require("fs");
 const seperator = "\n----------------------------------------------------------\n"
 
 
-function bandsInTownQuery(searchTerm) {
+const bandsInTownQuery = (searchTerm) => {
     const queryUrl = `https://rest.bandsintown.com/artists/${searchTerm}/events?app_id=codingbootcamp`;
 
-    request(queryUrl, function (error, response, body) {
+    request(queryUrl, (error, response, body) => {
 
         // If the request is successful
         if (!error && response.statusCode === 200) {
@@ -30,7 +30,7 @@ function bandsInTownQuery(searchTerm) {
                         `Date of Event: ${moment(jsonData[i].datetime).format("MMMM Do, YYYY")}`
                     ].join(`\n\n`);
 
-                    fs.appendFile('./functionality/log.txt', venueData + seperator, function(err) {
+                    fs.appendFile('./functionality/log.txt', venueData + seperator, (err) => {
                         if (err) {throw err}
                         
                         console.log(`${seperator}${venueData}${seperator}`)

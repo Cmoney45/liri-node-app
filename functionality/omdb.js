@@ -1,12 +1,12 @@
 const request = require("request");
 const fs = require("fs");
 
-function omdbQuery(searchTerm) {
+const omdbQuery = (searchTerm) => {
 
     const queryUrl = `https://www.omdbapi.com/?t=${searchTerm}&y=&plot=short&apikey=trilogy`;
     const seperator = "\n\n----------------------------------------------------------\n\n"
 
-    request(queryUrl, function (error, response, body) {
+    request(queryUrl, (error, response, body) => {
 
         // If the request is successful
         if (!error && response.statusCode === 200) {
@@ -31,7 +31,7 @@ function omdbQuery(searchTerm) {
                     `Plot Summary: ${jsonData.Plot}`,
                     `Actors: ${jsonData.Actors}`,
                 ].join("\n\n")
-                fs.appendFile('./functionality/log.txt', movieData + seperator, function (err) {
+                fs.appendFile('./functionality/log.txt', movieData + seperator, err => {
                     if (err) { throw err }
                     console.log(`${seperator}${movieData}${seperator}`)
 
